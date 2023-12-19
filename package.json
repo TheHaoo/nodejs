@@ -10,7 +10,9 @@
   "scripts": {
     "start": "nodemon server.js",
     "start:prod": "set NODE_ENV=production && nodemon server.js",
-    "debug": "ndb server.js"
+    "debug": "ndb server.js",
+    "build": "parcel build ./public/js/index.js --out-dir ./public/js/bundled --public-url /js/bundled",
+    "watch:js": "parcel watch --no-hmr ./public/js/index.js --out-dir ./public/js/bundled --public-url /js/bundled"
   },
   "author": "ThHao",
   "license": "ISC",
